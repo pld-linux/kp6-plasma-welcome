@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.1.5
+%define		kdeplasmaver	6.2.0
 %define		qtver		5.15.2
 %define		kpname		plasma-welcome
 %define		kf6ver		5.102.0
 
 Summary:	Plasma Welcome App
 Name:		kp6-%{kpname}
-Version:	6.1.5
+Version:	6.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	1d3f8230339a8c20873d059a94b76a3d
+# Source0-md5:	5efaae82fa9d0231f0cdd6bd94546baa
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
@@ -51,6 +51,7 @@ BuildRequires:	kf6-kwindowsystem-devel >= 5.98
 BuildRequires:	kf6-kxmlgui-devel >= 5.103.0
 BuildRequires:	kf6-solid-devel >= 5.103.0
 BuildRequires:	kirigami-addons-devel >= 0.11.90
+BuildRequires:	kp6-libplasma-devel >= %{version}
 BuildRequires:	kuserfeedback-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
