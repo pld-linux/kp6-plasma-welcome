@@ -1,12 +1,14 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	tests		# test suite
+
 %define		kdeplasmaver	6.2.0
 %define		qtver		5.15.2
 %define		kpname		plasma-welcome
 %define		kf6ver		5.102.0
 
 Summary:	Plasma Welcome App
+Summary(pl.UTF-8):	Aplikacja powitalna Plazmy
 Name:		kp6-%{kpname}
 Version:	6.2.0
 Release:	1
@@ -55,7 +57,6 @@ BuildRequires:	kp6-libplasma-devel >= %{version}
 BuildRequires:	kuserfeedback-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
-BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	xz
 Obsoletes:	kp5-%{kpname} < %{version}
@@ -64,7 +65,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		qt6dir		%{_libdir}/qt6
 
 %description
-A Friendly onboarding wizard for Plasma
+A Friendly onboarding wizard for Plasma.
 
 Welcome Center is the perfect introduction to KDE Plasma! It can help
 you learn how to connect to the internet, install apps, customize the
@@ -75,6 +76,18 @@ There are two usage modes:
 - Run the app with the `--after-upgrade-to` argument to show a
   post-upgrade message. For example: `plasma-welcome --after-upgrade-to
   5.25`.
+
+%description -l pl.UTF-8
+Przyjazne przyjęcie na pokładzie Plazmy.
+
+Powitalnia to idealne wprowadzenie do Plazmy KDE. Może pomóc nauczyć
+się, jak połączyć się z Internetem, instalować aplikacje, konfigurować
+system itd.
+
+Są dwa tryby użycia:
+- zwykłe uruchomienie aplikacji, pokazujące ekran powitalny
+- uruchomienie z opcją "--after-upgrade-to", aby pokazać komunikat po
+  uaktualnieniu - na przykład "plasma-welcome --after-upgrade-to 5.25".
 
 %prep
 %setup -q -n %{kpname}-%{version}
