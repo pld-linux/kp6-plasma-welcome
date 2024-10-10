@@ -39,6 +39,7 @@ BuildRequires:	kf6-kdbusaddons-devel >= 5.98
 BuildRequires:	kf6-kdeclarative-devel >= 5.98
 BuildRequires:	kf6-ki18n-devel >= 5.98
 BuildRequires:	kf6-kio-devel >= 5.98
+BuildRequires:	kf6-kirigami-addons-devel >= 0.11.90
 BuildRequires:	kf6-kirigami-devel >= 5.98
 BuildRequires:	kf6-kitemviews-devel >= 5.103.0
 BuildRequires:	kf6-kjobwidgets-devel >= 5.103.0
@@ -50,7 +51,6 @@ BuildRequires:	kf6-kwidgetsaddons-devel >= 5.103.0
 BuildRequires:	kf6-kwindowsystem-devel >= 5.98
 BuildRequires:	kf6-kxmlgui-devel >= 5.103.0
 BuildRequires:	kf6-solid-devel >= 5.103.0
-BuildRequires:	kirigami-addons-devel >= 0.11.90
 BuildRequires:	kp6-libplasma-devel >= %{version}
 BuildRequires:	kuserfeedback-devel
 BuildRequires:	ninja
