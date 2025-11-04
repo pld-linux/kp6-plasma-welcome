@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeplasmaver	6.5.1
+%define		kdeplasmaver	6.5.2
 %define		qtver		5.15.2
 %define		kpname		plasma-welcome
 %define		kf6ver		5.102.0
@@ -10,12 +10,12 @@
 Summary:	Plasma Welcome App
 Summary(pl.UTF-8):	Aplikacja powitalna Plazmy
 Name:		kp6-%{kpname}
-Version:	6.5.1
+Version:	6.5.2
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	2636919a472122508e35c6490a64d2e0
+# Source0-md5:	1e094cc3ff5b8a056a20bda0fc10dace
 URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
@@ -127,6 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/kf6/kded/kded_plasma-welcome.so
 %{_desktopdir}/org.kde.plasma-welcome.desktop
 %{_datadir}/metainfo/org.kde.plasma-welcome.appdata.xml
+%{_datadir}/qlogging-categories6/welcome.categories
 %{_libdir}/libplasma-welcome-publicplugin.a
 %dir %{_libdir}/qt6/qml/org/kde/plasma/welcome
 %{_libdir}/qt6/qml/org/kde/plasma/welcome/ApplicationIcon.qml
